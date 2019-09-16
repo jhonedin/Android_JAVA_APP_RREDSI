@@ -7,15 +7,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class LoginActivity extends AppCompatActivity {
+public class ConsultasActivity extends AppCompatActivity {
+
     Button btnVolverToMain;
-    Button btnAceptar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
-        btnVolverToMain = (Button) findViewById(R.id.btnVolverToMain);
+        setContentView(R.layout.activity_consultas);
+        btnVolverToMain = (Button) findViewById(R.id.btnInicioSesion);
         btnVolverToMain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
