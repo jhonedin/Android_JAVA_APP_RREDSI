@@ -7,14 +7,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class ConsultasActivity extends AppCompatActivity {
+public class MapasActivity extends AppCompatActivity {
 
     Button btnVolverToMain;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_consultas);
+        setContentView(R.layout.activity_mapas);
 
         btnVolverToMain = findViewById(R.id.btnVolverToMain);
         btnVolverToMain.setOnClickListener(new View.OnClickListener() {
@@ -24,7 +24,5 @@ public class ConsultasActivity extends AppCompatActivity {
                 startActivityForResult(intent, 0);
             }
         });
-
-
     }
 }
