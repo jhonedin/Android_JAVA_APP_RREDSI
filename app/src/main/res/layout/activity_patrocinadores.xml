@@ -17,7 +17,7 @@
             android:id="@+id/textViewTitulo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="RREDSI APP - PATROCINADORES"
+            android:text="RREDSI APP"
             android:textAlignment="center"
             android:textSize="30sp" />
 

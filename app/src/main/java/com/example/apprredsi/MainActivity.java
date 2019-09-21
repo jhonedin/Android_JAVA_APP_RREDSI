@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         btnMapas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent irToMapas = new Intent (v.getContext(), MapasActivity.class);
+                Intent irToMapas = new Intent (v.getContext(), MapsActivity.class);
                 startActivity(irToMapas);
             }
         });
