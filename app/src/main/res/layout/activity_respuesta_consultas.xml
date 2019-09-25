@@ -27,42 +27,11 @@
             android:layout_height="wrap_content"
             android:text="Volver" />
 
-        <TextView
-            android:id="@+id/textViewPrueba"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="TextView" />
 
-        <TextView
-            android:id="@+id/textViewPrueba2"
+        <ListView
+            android:id="@+id/listViewProyectos"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="TextView" />
-
-
-        <TextView
-            android:id="@+id/textViewPrueba3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="TextView" />
-
-        <TextView
-            android:id="@+id/textViewPrueba4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="TextView" />
-
-        <TextView
-            android:id="@+id/textViewPrueba5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="TextView" />
-
-        <TextView
-            android:id="@+id/textViewSalidaApi"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:layout_height="match_parent" />
 
     </LinearLayout>
 
