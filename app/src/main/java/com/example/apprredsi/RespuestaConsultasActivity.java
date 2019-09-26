@@ -82,7 +82,7 @@ public class RespuestaConsultasActivity extends AppCompatActivity {
 
     public String[] getData(String evaluador,String institucion,String autores,String areasconocimiento,String nombrepropuesta){
        // String sql = "http://www.mocky.io/v2/5d6addff3100006000d2077c"; // de prueba del profe
-        String sql = "http://www.mocky.io/v2/5d8a38273000008cc2b9a81d";
+        String sql = "http://www.mocky.io/v2/5d8a38273000008cc2b9a81d"; // el de pao pao
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
 
@@ -118,6 +118,7 @@ public class RespuestaConsultasActivity extends AppCompatActivity {
                 //mensaje += json_array.getJSONObject(i).toString();
                 JSONObject objectTitulo = (JSONObject) unObject.get("trabajo");
                 arrayProyectos.add(objectTitulo.get("titulo").toString());
+                //arrayProyectos.add(((JSONObject) unObject.get("trabajo")).toString());
             }
             //sal.setText(mensaje);
 
