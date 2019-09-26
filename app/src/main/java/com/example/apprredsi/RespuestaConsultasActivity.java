@@ -88,6 +88,7 @@ public class RespuestaConsultasActivity extends AppCompatActivity {
 
         HttpURLConnection conn;
         ArrayList<String> arrayProyectos = new ArrayList<>();
+        ArrayList<String> arrayTitulosRetornados = new ArrayList<>();
         try {
             URL url = new URL(sql);
             conn = (HttpURLConnection) url.openConnection();
@@ -107,20 +108,27 @@ public class RespuestaConsultasActivity extends AppCompatActivity {
             JSONObject object = new JSONObject(json);
             JSONArray json_array = object.optJSONArray("agenda");
 
-            //String mensaje = "";
+            String titulosRetornados = "";
+
 
             for(int i=0; i < json_array.length(); i++){
                 JSONObject unObject = json_array.getJSONObject(i);
-                //JSONArray json_array_Trabajo =  unObject.optJSONArray("trabajo");
-                //JSONObject ObjectTrabajo = json_array_Trabajo.getJSONObject(i);
-                //Log.d("mensaje",unObject.get("id_agenda") .toString());
-                //arrayProyectos.add(unObject.get("id_agenda").toString());
-                //mensaje += json_array.getJSONObject(i).toString();
+
                 JSONObject objectTitulo = (JSONObject) unObject.get("trabajo");
-                arrayProyectos.add(objectTitulo.get("titulo").toString());
-                //arrayProyectos.add(((JSONObject) unObject.get("trabajo")).toString());
+                arrayTitulosRetornados.add(objectTitulo.get("titulo").toString());
+                //arrayProyectos.add(titulosRetornados);
+
             }
-            //sal.setText(mensaje);
+            if(!nombrepropuesta.isEmpty()) {
+                for (int i = 0; i < arrayTitulosRetornados.size(); i++) {
+                    if (nombrepropuesta.equals(arrayTitulosRetornados.get(i))) {
+                        arrayProyectos.add(arrayTitulosRetornados.get(i));
+                    }
+                }
+            }
+            else{
+                arrayProyectos = arrayTitulosRetornados;
+            }
 
 
 
